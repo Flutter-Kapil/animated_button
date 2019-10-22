@@ -52,11 +52,11 @@ class _AnimatedButtonState extends State<AnimatedButton>
         width: 150,
         color: Colors.grey,
         child: ScaleTransition(
-          scale: myController,
+          scale: Tween(begin: 1.0, end: 3.0).animate(myController),
           child: Icon(
-            Icons.location_on,
-            color: Colors.white,
-            size: 60,
+            Icons.favorite,
+            color: Colors.red,
+            size: 40,
           ),
         ),
       ),
