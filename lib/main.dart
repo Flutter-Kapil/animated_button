@@ -36,6 +36,9 @@ class _AnimatedButtonState extends State<AnimatedButton>
         myController.forward();
       }
     });
+    myController.addListener(() {
+      setState(() {});
+    });
     // TODO: implement initState
     super.initState();
   }
@@ -54,7 +57,7 @@ class _AnimatedButtonState extends State<AnimatedButton>
         width: 150,
         color: Colors.white,
         child: Transform.scale(
-          scale: Tween(begin: 1.0, end: 1.3).transform(smoothAnimation.value),
+          scale: Tween(begin: 1.0, end: 3.0).transform(smoothAnimation.value),
           child: Icon(
             Icons.favorite,
             color: Colors.red,
