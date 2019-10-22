@@ -53,8 +53,8 @@ class _AnimatedButtonState extends State<AnimatedButton>
         height: 150,
         width: 150,
         color: Colors.white,
-        child: ScaleTransition(
-          scale: Tween(begin: 1.0, end: 1.3).animate(smoothAnimation),
+        child: Transform.scale(
+          scale: Tween(begin: 1.0, end: 1.3).transform(smoothAnimation.value),
           child: Icon(
             Icons.favorite,
             color: Colors.red,
