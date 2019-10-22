@@ -42,6 +42,8 @@ class _AnimatedButtonState extends State<AnimatedButton>
 
   @override
   Widget build(BuildContext context) {
+    CurvedAnimation smoothAnimation =
+        CurvedAnimation(parent: myController, curve: Curves.bounceIn);
     return GestureDetector(
       onTap: () {
         myController.forward();
@@ -52,7 +54,7 @@ class _AnimatedButtonState extends State<AnimatedButton>
         width: 150,
         color: Colors.white,
         child: ScaleTransition(
-          scale: Tween(begin: 1.0, end: 1.3).animate(myController),
+          scale: Tween(begin: 1.0, end: 1.3).animate(smoothAnimation),
           child: Icon(
             Icons.favorite,
             color: Colors.red,
