@@ -51,8 +51,8 @@ class _AnimatedButtonState extends State<AnimatedButton>
         height: 150,
         width: 150,
         color: Colors.grey,
-        child: FadeTransition(
-          opacity: myController,
+        child: ScaleTransition(
+          scale: myController,
           child: Icon(
             Icons.location_on,
             color: Colors.white,
