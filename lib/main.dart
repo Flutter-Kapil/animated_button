@@ -13,8 +13,7 @@ class MyApp extends StatelessWidget {
           children: <Widget>[
             AnimatedButton(Icons.thumb_down),
             AnimatedButton(Icons.favorite),
-            AnimatedButton(Icons.thumb_up),
-            
+            AnimatedButton(Icons.thumb_up), 
           ],
         ),
       ),
