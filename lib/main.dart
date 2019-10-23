@@ -8,13 +8,23 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       home: Center(
-        child: AnimatedButton(),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+            AnimatedButton(Icons.thumb_down),
+            AnimatedButton(Icons.favorite),
+            AnimatedButton(Icons.thumb_up),
+            
+          ],
+        ),
       ),
     );
   }
 }
 
 class AnimatedButton extends StatefulWidget {
+  IconData buttonIcon;
+  AnimatedButton(this.buttonIcon);
   @override
   _AnimatedButtonState createState() => _AnimatedButtonState();
 }
@@ -58,11 +68,7 @@ class _AnimatedButtonState extends State<AnimatedButton>
         color: Colors.white,
         child: Transform.scale(
           scale: Tween(begin: 1.0, end: 3.0).transform(smoothAnimation.value),
-          child: Icon(
-            Icons.favorite,
-            color: Colors.red,
-            size: 40,
-          ),
+          child:Icon(widget.buttonIcon,color:Colors.red,size: 40,),
         ),
       ),
     );
